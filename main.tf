@@ -6,19 +6,13 @@ terraform {
       version = "~>3.43.0"
     }
   }
-  cloud {
-    organization = "gk_guru"
-
-    workspaces {
-      name = "TerraCI"
-    }
+  
   }
-}
+
 
 
 provider "azurerm" {
   features {}
-  skip_provider_registration = true
 }
 
 resource "azurerm_resource_group" "rg" {
